@@ -1,0 +1,43 @@
+
+#include<iostream>
+#include<cctype>
+using namespace std;
+
+int main()
+{
+    //  Tolower() The capital letter will be lower
+    //  Toupper() The lower will be capital
+    // cout << 'A'<< "\n";
+    // cout << tolower('a');
+    // cout << char(tolower('A')) << "\n";
+    
+    
+    // cout << "\n==================\n";
+    // cout << char(tolower('A') ) << "\n";
+    // cout << char(toupper('a')) << "\n";
+    
+    // string nameone = "ElZEro";
+    // cout << char(tolower('E'));
+    // cout << char(toupper('l'));
+    // cout << char(tolower('Z'));
+    // cout << char(tolower('E'));
+    // cout << char(toupper('r'));
+    // cout << char(toupper('o'));
+    
+    string nameone = "ElZEro";
+    
+    for (int i = 0; i < 6; i++)
+{
+    // cout << nameone[i] << "\n";
+    if (islower(nameone[i]))
+    {
+        cout << char(toupper(nameone[i]));
+    }
+    else if (isupper(nameone[i]))
+    {
+        cout << char(tolower(nameone[i]));
+    }
+    
+}
+    return 0;
+}
