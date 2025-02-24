@@ -1,0 +1,48 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+// min function
+// max function
+// count function
+int main()
+{
+    // cout << max(10, -20) << "\n";
+    // cout << min(10, 0) << "\n";
+    // int nums[] = {10, 20, 30, 40, 50, 20, 10};
+    cout << min({10, 20, 30, 40, 50, 20, 10}) << "\n";
+    cout << "========================\n";
+    int nums[] = {10, 20, -30, 40, 50, 10, -100};
+    int numsSize = size(nums);
+    int CheckMinNum = 0;
+    for(int i = 0; i < numsSize; i++)
+    {
+        if(nums[i] < CheckMinNum)
+        {
+        // nums[i] = CheckMinNum;
+        CheckMinNum = nums[i];
+        }
+    }
+    cout << CheckMinNum << "\n";
+    
+    cout << "=============================\n";
+    
+    int Nums[] = {10, 20, -30, 40, 50, 10, -100};
+    int SizeNums = size(Nums);
+    int CheckMaxNum = 0;
+    for(int i = 0; i < SizeNums; i++)
+    {
+        if (Nums[i] > CheckMaxNum)
+        {
+        CheckMaxNum = Nums[i];
+        }
+    }
+    cout << CheckMaxNum << "\n";
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
