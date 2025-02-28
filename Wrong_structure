@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+// Write Your Function Here
+void swapping(string text)
+{
+    int textSize = size(text);
+    
+    for( int i = 0; i < textSize; i++)
+    {
+        if(text[i] == 'H')
+        {
+        cout << 'H';
+        continue;
+        
+        }
+        if (text[i] == 'h')
+        {
+            cout << 'h';
+            continue;
+        }
+        
+        
+        
+        if (isupper(text[i]))
+        {
+            cout << char(tolower(text[i]));
+        }
+        
+        else if (islower(text[i]))
+        {
+            cout << char(toupper(text[i]));
+            
+        }
+    }
+    
+
+}
+
+
+int main()
+{
+  swapping("hero Of THe PROgramming"); // hERO oF tHE proGRAMMING
+  return 0;
+}
