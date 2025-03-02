@@ -9,7 +9,7 @@ int sumall(int numbers[], int numssize, int noneed)
     for (int i = 0; i < numssize; i++)
     {
         
-        if ( numbers[i] == 13)
+        if ( numbers[i] == noneed)
         {
             continue;
         }
