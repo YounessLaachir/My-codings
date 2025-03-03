@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+// Write Your Function Here
+int minpositive(int numbers[], int numssize)
+{
+    int smallestpositive = -1;  // Initialize to -1 to indicate no positive number found
+    for (int i = 0; i < numssize; i++)
+    {
+        if (numbers[i] > 0)  // Only consider positive numbers
+        {
+            if (smallestpositive == -1 || numbers[i] < smallestpositive)  // Update smallest positive
+            {
+                smallestpositive = numbers[i];
+            }
+        }
+    }
+    return smallestpositive;  // If no positive number is found, it returns -1
+}
+int main()
+{
+    int numbers[] = { -10, -20, 15, 100, 10, 5, -50, 0, 4, 3 };  // Expected output: 5
+    int numssize = size(numbers);
+    cout << minpositive(numbers, numssize) << "\n";  // Outputs 5
+    return 0;
+}
