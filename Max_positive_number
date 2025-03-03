@@ -1,0 +1,26 @@
+// Max positive number in the array
+#include <iostream>
+using namespace std;
+
+// Write Your Function Here
+int maxpositive(int numbers[], int numssize)
+{
+    int maxnum = numbers[0];
+    for (int i = 1; i < numssize; i++)
+    {
+        if(maxnum < numbers[i])
+        {
+            maxnum = numbers[i];
+        }
+        
+    }
+    return maxnum;
+}
+
+int main()
+{
+  int numbers[] = { -10, -20, 15, 100, 10, 5, -50, 0 }; // 5
+  int numssize = size(numbers);
+  cout << maxpositive(numbers, numssize) << "\n";
+  return 0;
+}
